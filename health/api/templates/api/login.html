@@ -1,0 +1,117 @@
+<!-- filepath: d:\hoctap\pythonweb\health\api\templates\api\login.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Quản Lý Vật Tư Y Tế</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin_login' %}">ADMIN</a></li> 
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="login-section d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white text-center">
+                            <h3>Đăng Nhập</h3>
+                        </div>
+                        <div class="card-body">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Tên Đăng Nhập</label>
+                                    <input type="text" class="form-control" id="username" name="username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật Khẩu</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100">Đăng Nhập</button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="text-dark">Quên mật khẩu?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer bg-dark text-white pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row text-md-left">
+                <div class="col-md-3">
+                    <h5 class="text-uppercase fw-bold">Quản Lý Vật Tư Y Tế</h5>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase fw-bold">Email</h5>
+                    <p>support@example.com</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase fw-bold">Địa Chỉ</h5>
+                    <p>1234 Đường ABC, TP. XYZ</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase fw-bold">Liên Hệ</h5>
+                    <p>+00 123 456 7890</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Giờ Mở Cửa</h6>
+                    <ul class="list-unstyled">
+                        <li>Thứ Hai - Thứ Bảy: 8:00 - 18:00</li>
+                        <li>Chủ Nhật: Nghỉ</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Tin Tức</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Cập Nhật Vật Tư Mới</a></li>
+                        <li><a href="#" class="text-white">Khuyến Mãi</a></li>
+                        <li><a href="#" class="text-white">Sự Kiện</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Liên Kết</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Trang Chủ</a></li>
+                        <li><a href="#" class="text-white">Giới Thiệu</a></li>
+                        <li><a href="#" class="text-white">Dịch Vụ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Tìm Kiếm</h6>
+                    <input type="text" class="form-control" placeholder="Tìm Kiếm Tại Đây">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>Quản Lý Vật Tư Y Tế. Powered by <a href="#" class="text-white">Ovation Themes</a> & <a href="#" class="text-white">WordPress</a>.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

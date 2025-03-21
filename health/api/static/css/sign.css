@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: linear-gradient(to right, #35c3dc, #003d7a);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #07daff;
+    text-decoration: underline;
+}
+
+.sign-up-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background: linear-gradient(to right, #fff, #f0f0f0);
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 30px;
+    background: linear-gradient(to right, #35c3dc, #003d7a);
+}
+
+.card-body .form-label {
+    font-weight: bold;
+}
+
+.card-body .form-control {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card-body .btn {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-body .btn:hover {
+    background-color: #363636;
+    
+    transform: translateY(-3px);
+}
+
+.card-footer {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+/* Styles for placing first name and last name on the same line */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
